@@ -6,10 +6,9 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 function generateMarkdown(data) {
     return ` 
-    https://img.shields.io/github/contributors/hollypro87/Readme-Generator?style=plastic
   # ${data.title}
 
-  # ${data.description}
+  # ${data.description} https://img.shields.io/github/contributors/hollypro87/Readme-Generator?style=plastic
 
   # Table of Contents
   * Installation
