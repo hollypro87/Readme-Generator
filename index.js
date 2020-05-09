@@ -7,10 +7,9 @@ const writeFileAsync = util.promisify(fs.writeFile);
 function generateMarkdown(data) {
     return ` 
   # ${data.title}
-  
-  https://img.shields.io/github/contributors/hollypro87/Readme-Generator?style=plastic
+  ${data.description} 
 
-  # ${data.description} 
+  https://img.shields.io/github/contributors/${data.username}/${data.title}?style=plastic
 
   # Table of Contents
   * Installation
@@ -32,7 +31,7 @@ function generateMarkdown(data) {
   # License
    ${data.license}
 
-  #Tests
+  # Tests
    ${data.tests}
 
   # FAQ
@@ -101,7 +100,7 @@ async function init() {
 
         await writeFileAsync("README.md", md);
 
-        console.log("Successfully wrote ReadMe file.");
+        console.log("Successfully wrote README.md file.");
     } catch (err) {
         console.log(err);
     }
