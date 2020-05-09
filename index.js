@@ -7,8 +7,10 @@ const writeFileAsync = util.promisify(fs.writeFile);
 function generateMarkdown(data) {
     return ` 
   # ${data.title}
+  
+  https://img.shields.io/github/contributors/hollypro87/Readme-Generator?style=plastic
 
-  # ${data.description} https://img.shields.io/github/contributors/hollypro87/Readme-Generator?style=plastic
+  # ${data.description} 
 
   # Table of Contents
   * Installation
@@ -92,7 +94,6 @@ function promptUser() {
     ]);
 }
 async function init() {
-    console.log("hi")
     try {
         const answers = await promptUser();
 
