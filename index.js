@@ -1,12 +1,11 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const md = require("generateMarkdown");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
 function generateMarkdown(data) {
-    return `
+    return `  
   # ${data.title}
 
   # ${data.description}
@@ -19,15 +18,23 @@ function generateMarkdown(data) {
   * Tests
   * FAQ
 
-  # ${data.installation}
+  # Installation
+   ${data.installation}
 
-  # ${data.usage}
+  # Usage
+   ${data.usage}
 
-  # ${data.contributing}
+  # Contributors
+   ${data.contributing}
 
-  # ${data.tests}
+  # License
+   ${data.license}
 
-  # ${data.questions}
+  #Tests
+   ${data.tests}
+
+  # FAQ
+   ${data.questions}
   
   `;
 
