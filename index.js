@@ -11,6 +11,7 @@ const validateEmail = (email) => {
 function generateMarkdown(data) {
     return ` 
   # ${data.title}
+  ${data.URL}
   ${data.description} 
 
   https://img.shields.io/github/contributors/${data.username}/${data.title}?style=plastic
@@ -40,6 +41,8 @@ function generateMarkdown(data) {
 
   # FAQ
    ${data.questions}
+
+   ${data.email} 
   
   `;
 
@@ -58,6 +61,11 @@ function promptUser() {
             type: "input",
             name: "title",
             message: "What is your project title?"
+        },
+        {
+            type: "input",
+            name: "URL",
+            message: "The URL to your project?",
         },
         {
             type: "input",
