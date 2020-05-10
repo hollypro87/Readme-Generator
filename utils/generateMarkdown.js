@@ -22,29 +22,29 @@ ${getBadge(data.license, data.username, data.title, data.color, data.URL)}
 ${data.description} 
 
 # Table of Contents
-* [Installation]
-* [Usage]
-* [License]
-* [Contributing]
-* [Tests]
-* [FAQ]
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [FAQ](#FAQ)
 
-# Installation
+## Installation
  ${data.installation}
 
-# Usage
+## Usage
  ${data.usage}
 
-# Contributors
+## Contributors
  ${data.contributing}
 
-# License
+## License
  ${data.license}
 
-# Tests
+## Tests
  ${data.tests}
 
-# FAQ
+## FAQ
  ${data.questions}
 
 If you have any questions about the repository please contact [${
