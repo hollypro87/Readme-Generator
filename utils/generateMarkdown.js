@@ -7,12 +7,12 @@ ${data.description}
 https://img.shields.io/github/contributors/${data.username}/${data.title}?style=plastic
 
 # Table of Contents
-* Installation
-* Usage
-* License
-* Contributing
-* Tests
-* FAQ
+* [Installation] (#installation)
+* [Usage] (#usage)
+* [License] (#license)
+* [Contributing] (#contributors)
+* [Tests] (#tests)
+* [FAQ] (#questions)
 
 # Installation
  ${data.installation}
@@ -24,7 +24,7 @@ https://img.shields.io/github/contributors/${data.username}/${data.title}?style=
  ${data.contributing}
 
 # License
- ${data.license}
+ ${getLicense(data.license)}
 
 # Tests
  ${data.tests}
