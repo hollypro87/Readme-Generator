@@ -6,12 +6,12 @@ This is an application that will assist you with writing a readme file for your 
 
 # Table of Contents
 
-- [Installation](# Installation)
-- [Usage](# Usage)
-- [License](# License)
-- [Contributing](# Contributors)
-- [Tests](# Tests)
-- [FAQ](# FAQ)
+- [Installation]
+- [Usage]
+- [License]
+- [Contributors]
+- [Tests]
+- [FAQ]
 
 # Installation
 

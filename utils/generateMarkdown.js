@@ -22,12 +22,12 @@ ${getBadge(data.license, data.username, data.title, data.color, data.URL)}
 ${data.description} 
 
 # Table of Contents
-* [Installation](# Installation)
-* [Usage](# Usage)
-* [License](# License)
-* [Contributing](# Contributors)
-* [Tests](# Tests)
-* [FAQ](# FAQ)
+* [Installation]
+* [Usage]
+* [License]
+* [Contributing]
+* [Tests]
+* [FAQ]
 
 # Installation
  ${data.installation}
