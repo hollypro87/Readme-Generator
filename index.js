@@ -33,6 +33,12 @@ function promptUser() {
             message: "What is a brief description of your project?"
         },
         {
+            type: "list",
+            name: "color",
+            message: "What's your favorite color?",
+            choices: ["red", "green", "purple", "black", "magenta"],
+        },
+        {
             type: "input",
             name: "installation",
             message: "How do you install this program?"

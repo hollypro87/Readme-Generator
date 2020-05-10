@@ -1,10 +1,28 @@
+function getUrl(GH, title, link) {
+  return `https://github.com/${username}/${link}`;
+}
+
+function getBadge(license, username, title, color, link) {
+  if (license !== "None") {
+    return `[![GitHub license](https://img.shields.io/badge/license-${license}-${color}.svg)](${getUrl(
+      username,
+      title,
+      link
+    )})`;
+  } else {
+    return ``;
+  }
+}
+
 function generateMarkdown(data) {
   return ` 
 # ${data.title}
-${data.URL}
-${data.description} 
 
-https://img.shields.io/github/contributors/${data.username}/${data.title}?style=plastic
+${getBadge(data.license, data.username, data.title, data.color, data.URL)}
+
+${data.URL}
+
+${data.description} 
 
 # Table of Contents
 * [Installation] (#installation)
@@ -32,7 +50,9 @@ https://img.shields.io/github/contributors/${data.username}/${data.title}?style=
 # FAQ
  ${data.questions}
 
--Email: ${data.email} 
+If you have any questions about the repository, or an open issue, please contact [${
+    data.GH
+    }](https://github.com/${username}/) directly at ${data.email}. 
 
 `;
 
