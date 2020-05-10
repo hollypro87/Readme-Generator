@@ -1,5 +1,5 @@
 function getUrl(username, title, link) {
-  return `https://github.com/${username}/${link}`;
+  return `https://github.com/${username}/${title}`;
 }
 
 function getBadge(license, username, title, color, link) {
@@ -22,12 +22,12 @@ ${getBadge(data.license, data.username, data.title, data.color, data.URL)}
 ${data.description} 
 
 # Table of Contents
-* [Installation] (#installation)
-* [Usage] (#usage)
-* [License] (#license)
-* [Contributing] (#contributors)
-* [Tests] (#tests)
-* [FAQ] (#questions)
+* [Installation](# Installation)
+* [Usage](# Usage)
+* [License](# License)
+* [Contributing](# Contributors)
+* [Tests](# Tests)
+* [FAQ](# FAQ)
 
 # Installation
  ${data.installation}
@@ -47,7 +47,7 @@ ${data.description}
 # FAQ
  ${data.questions}
 
-If you have any questions about the repository, or an open issue, please contact [${
+If you have any questions about the repository please contact [${
     data.username
     }](https://github.com/${data.username}/) directly at ${data.email}. 
 
