@@ -83,9 +83,10 @@ function promptUser() {
             message: "How do you use this program?"
         },
         {
-            type: "input",
+            type: "list",
             name: "license",
-            message: "Enter license information here."
+            message: "Enter license information here.",
+            choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
         },
         {
             type: "input",
