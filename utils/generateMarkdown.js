@@ -24,7 +24,7 @@ https://img.shields.io/github/contributors/${data.username}/${data.title}?style=
  ${data.contributing}
 
 # License
- ${getLicense(data.license)}
+ ${data.license}
 
 # Tests
  ${data.tests}

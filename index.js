@@ -40,7 +40,7 @@ function promptUser() {
         {
             type: "input",
             name: "usage",
-            message: "How do you use this program?"
+            message: "Enter usage specifications here."
         },
         {
             type: "list",
@@ -51,12 +51,12 @@ function promptUser() {
         {
             type: "input",
             name: "contributing",
-            message: "Enter who has contributed to this program."
+            message: "How can someone contribute to this project?"
         },
         {
             type: "input",
             name: "tests",
-            message: "How do you test if the program is working?"
+            message: "How do you run tests?"
         },
         {
             type: "input",
