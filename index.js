@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 const validateEmail = (email) => {
@@ -8,47 +9,6 @@ const validateEmail = (email) => {
     return re.test(String(email).toLowerCase());
 };
 
-function generateMarkdown(data) {
-    return ` 
-  # ${data.title}
-  ${data.URL}
-  ${data.description} 
-
-  https://img.shields.io/github/contributors/${data.username}/${data.title}?style=plastic
-
-  # Table of Contents
-  * Installation
-  * Usage
-  * License
-  * Contributing
-  * Tests
-  * FAQ
-
-  # Installation
-   ${data.installation}
-
-  # Usage
-   ${data.usage}
-
-  # Contributors
-   ${data.contributing}
-
-  # License
-   ${data.license}
-
-  # Tests
-   ${data.tests}
-
-  # FAQ
-   ${data.questions}
-
-   ${data.email} 
-  
-  `;
-
-}
-
-module.exports = generateMarkdown;
 
 function promptUser() {
     return inquirer.prompt([
