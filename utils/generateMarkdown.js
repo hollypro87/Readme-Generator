@@ -1,4 +1,4 @@
-function getUrl(GH, title, link) {
+function getUrl(username, title, link) {
   return `https://github.com/${username}/${link}`;
 }
 
@@ -13,14 +13,11 @@ function getBadge(license, username, title, color, link) {
     return ``;
   }
 }
-
 function generateMarkdown(data) {
   return ` 
 # ${data.title}
 
 ${getBadge(data.license, data.username, data.title, data.color, data.URL)}
-
-${data.URL}
 
 ${data.description} 
 
@@ -51,8 +48,8 @@ ${data.description}
  ${data.questions}
 
 If you have any questions about the repository, or an open issue, please contact [${
-    data.GH
-    }](https://github.com/${username}/) directly at ${data.email}. 
+    data.username
+    }](https://github.com/${data.username}/) directly at ${data.email}. 
 
 `;
 

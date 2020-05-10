@@ -24,11 +24,6 @@ function promptUser() {
         },
         {
             type: "input",
-            name: "URL",
-            message: "The URL to your project?",
-        },
-        {
-            type: "input",
             name: "description",
             message: "What is a brief description of your project?"
         },
