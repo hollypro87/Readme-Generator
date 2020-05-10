@@ -3,6 +3,10 @@ const fs = require("fs");
 const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
+const validateEmail = (email) => {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
 
 function generateMarkdown(data) {
     return ` 
@@ -89,7 +93,13 @@ function promptUser() {
             type: "input",
             name: "questions",
             message: "Enter frequently asked questions here."
-        }
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your email?",
+            validate: validateEmail,
+        },
     ]);
 }
 async function init() {
